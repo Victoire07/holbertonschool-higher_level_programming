@@ -12,4 +12,3 @@ def uppercase(str):
         resultat += majuscule
 
     print("{}".format(resultat))
-
