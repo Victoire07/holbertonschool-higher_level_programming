@@ -9,5 +9,5 @@ if __name__ == "__main__":
         print("1 argument:")
     else:
         print("{} arguments:".format(nb_args))
-        for nombre in range (1, len(sys.argv)):
+        for nombre in range(1, len(sys.argv)):
             print("{}: {}".format(nombre, sys.argv[nombre]))
