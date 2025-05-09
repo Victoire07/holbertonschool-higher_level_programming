@@ -4,3 +4,4 @@ if __name__ == "__main__":
     total_args = 0
 for nombre in range(1, len(sys.argv)):
     total += int(sys.argv[nombre])
+    print(total)
