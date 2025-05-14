@@ -4,5 +4,5 @@ def new_in_list(my_list, idx, element):
         return my_list[:]
     else:
         copie = my_list[:]
-        copie [idx] = element
+        copie[idx] = element
         return copie
