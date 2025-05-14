@@ -5,5 +5,5 @@ def multiple_returns(sentence):
         premier = None
     else:
         premier = sentence[0]
-    return()
+    return(longueur, premier)
 
