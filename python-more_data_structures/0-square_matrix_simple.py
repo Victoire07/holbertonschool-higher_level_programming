@@ -4,4 +4,4 @@ def square_matrix_simple(matrix=[]):
     for ligne in matrix:
         ligne_au_carree = list(map(lambda x: x**2, ligne))
         new_matrix.append(ligne_au_carree)
-    return(new_matrix)
+    return (new_matrix)
