@@ -7,9 +7,9 @@ def roman_to_int(roman_string):
     valeur_precedente = 0
     for char in reversed(roman_string):
         value = dico_roman.get(char, 0)
-        if value < prev:
+        if value <  valeur_precedente:
             total -= value
         else:
             total += value
-        prev = value
+        valeur_precedente = value
     return (total)
