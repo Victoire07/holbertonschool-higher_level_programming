@@ -9,4 +9,3 @@ def best_score(a_dictionary):
             score_max = value
             nom_associe = key
     return (nom_associe)
-
