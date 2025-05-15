@@ -5,5 +5,8 @@ def best_score(a_dictionary):
     score_max = 0
     nom_associe = ""
     for key, value in a_dictionary.items():
-        return (nom_associe)
+        if value > score_max:
+            score_max = value
+            nom_associe = key
+            return (nom_associe)
 
