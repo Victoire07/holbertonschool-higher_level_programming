@@ -5,5 +5,9 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             a = my_list_1[i]
             b = my_list_2[i]
-            resultats = a / b
+            resultats.append(a / b)
         except(IndexError):
+            print("out of range")
+            resultats.append(0)
+
+
