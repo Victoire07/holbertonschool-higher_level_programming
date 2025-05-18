@@ -6,6 +6,10 @@ Ce module a pour but d'afficher un carré avec des caractères dièzes(#)
 
 def print_square(size):
     """
-    Va afficher 'My name is <first_name> <last_name>'.
-    Les deux paramètres doivent être des chaînes de caractères.
+    Va afficher un carré de size lignes et colonnes avec le caractère #
+    size doit être un entier
+    si < à 0 : ValueError
+    si float : TypeError
     """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
