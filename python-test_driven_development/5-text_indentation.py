@@ -13,5 +13,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     chars = [".", "?", ":"]
     buffer = ""
-
-    
+    for c in text:
+        buffer += c
+        if c in chars:
+            print(buffer.strip(), end="\n\n")
+            buffer = ""
