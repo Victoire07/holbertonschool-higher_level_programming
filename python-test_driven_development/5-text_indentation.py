@@ -18,6 +18,6 @@ def text_indentation(text):
         if c in chars:
             print(buffer.strip(), end="\n\n")
             buffer = ""
-    
+
     if buffer.strip():
         print(buffer.strip(), end="")
