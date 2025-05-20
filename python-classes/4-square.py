@@ -9,6 +9,7 @@ Ce module définit une classe Square avec :
 - un getter et un setter pour accéder/modifier size avec vérification
 """
 
+
 class Square:
     """
     Classe représentant un carré avec contrôle pr sa taille
@@ -18,17 +19,20 @@ class Square:
         Initialise un nouveau carré avec une taille donnée (par défaut 0).
         """
         self.size = size
+
     def area(self):
         """
         Calcule et retourne aire du carré
         """
         return self.__size ** 2
+
     @property
-    def size (self):
+    def size(self):
         """
         Permet de récupérer l'aire du carré!
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """
@@ -40,4 +44,3 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
