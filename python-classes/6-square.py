@@ -82,8 +82,8 @@ class Square:
             print()
             return
 
-        for _ in range(self.position[1]): #déclage verticale
-                print()
+        for _ in range(self.position[1]):
+            print()
 
-        for _ in range(self.size): #affich carre lig par lig avec decalage ver
-                print(" " * self.position[0] + "#" * self.size)
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
