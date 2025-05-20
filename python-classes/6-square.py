@@ -75,8 +75,15 @@ class Square:
         self.__position = value
 
     def my_print(self):
+        """
+        Affiche la carré avec le # selon la position
+        """
         if self.size <= 0:
             print()
-        else:
-            for i in range(self.size):
-                print("#" * self.size)
+            return
+
+        for _ in range(self.position[1]): #déclage verticale
+                print()
+
+        for _ in range(self.size): #affich carre lig par lig avec decalage ver
+                print(" " * self.position[0] + "#" * self.size)
