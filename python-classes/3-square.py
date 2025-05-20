@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
 """
-Module 2-square.py
+Module 3-square.py
 
-Ce module définit une classe Square avec un attribut privé __size,
-et valide que la taille est un entier positif ou nul!!
+Ce module définit une classe Square avec :
+- un attribut privé __size
+- une vérification de type et de valeur lors de l’instanciation
+- une méthode area() pour calculer l’aire du carré
 """
-
 
 class Square:
     """
@@ -26,4 +27,7 @@ class Square:
         self.__size = size
 
     def area(self):
+        """
+        Retourne l'aire du carré
+        """
         return (self.__size ** 2)
