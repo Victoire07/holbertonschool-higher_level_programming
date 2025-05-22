@@ -120,4 +120,4 @@ class Rectangle:
         """
         Permet d'afficher un message quand l'instance est supprimé
         """
-    print("Bye rectangle...")
+        print("Bye rectangle...")
