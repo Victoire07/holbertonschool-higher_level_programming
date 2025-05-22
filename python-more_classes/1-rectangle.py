@@ -33,6 +33,8 @@ class Rectangle:
         Getter de la largeur du rectangle.
         Retourne la valeur de l'attribut privé __width.
         """
+        return self.__width
+
 
     @width.setter
     def width(self, value):
@@ -45,4 +47,26 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError(" width must be >= 0")
+        self.__width = value
+        
+    @property
+    def height(self):
+        """
+        Getter de la hauteur du rectangle
+        Retourne la valeur de l'attribut privée __height
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+        Setter de la hauteur avec 2 vérifications :
+        ° être un entier
+        ° être sup ou égale à 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
            
