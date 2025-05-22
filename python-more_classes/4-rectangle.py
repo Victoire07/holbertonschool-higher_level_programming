@@ -8,9 +8,12 @@ Ce module définit une classe Rectangle avec :
 - des getters et setters avec vérification de type/valeurs
 - un constructeur avec arguments optionnels
 - une méthode area() qui retourne l’aire
-- une méthode perimeter() qui retourne le périmètre (0 si width ou height est nul)
-- la méthode __str__ qui retourne une représentation textuelle du rectangle avec des '#'
-- la méthode __repr__ qui retourne une chaîne permettant de recréer un objet identique avec eval()
+- une méthode perimeter() qui retourne le périmètre
+(0 si width ou height est nul)
+- la méthode __str__ qui retourne une représentation textuelle du rectangle
+avec des '#'
+- la méthode __repr__ qui retourne une chaîne permettant de recréer
+ un objet identique avec eval()
 """
 
 
