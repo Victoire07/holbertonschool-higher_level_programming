@@ -8,7 +8,8 @@ Ce module définit une classe Rectangle avec :
 - des getters et setters avec vérification de type/valeurs
 - un constructeur avec arguments optionnels
 - une méthode area() qui retourne l’aire
-- une méthode perimeter() qui retourne le périmètre (0 si width ou height est nul)
+- une méthode perimeter() qui
+retourne le périmètre (0 si width ou height est nul)
 """
 
 
@@ -84,7 +85,6 @@ class Rectangle:
         Permet de calculer le périmètre du rectangle
         """
         if self.__width == 0 or self.__height == 0:
-            return(0)
+            return (0)
         else:
             return (2 * (self.__height + self.__width))
-
