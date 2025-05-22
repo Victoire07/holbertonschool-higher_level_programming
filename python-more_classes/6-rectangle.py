@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-MODIF ICI POUR LA QUESTION 6 Module 5-rectangle.py
+Module 6-rectangle.py
 
 Ce module définit une classe Rectangle avec :
 - deux attributs privés : __width et __height
@@ -22,13 +22,13 @@ Rectangle vivants
 
 
 class Rectangle:
-    number_of_instances = 0
     """
     Classe Rectangle qui définit un rectangle
     avec des attributs privés et des accesseurs contrôlés et avec :
     un compteur d'instances (number_of_instances) qui suit
     le nombre d'objets créés
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
