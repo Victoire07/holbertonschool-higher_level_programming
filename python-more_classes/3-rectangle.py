@@ -96,5 +96,6 @@ class Rectangle:
         et chaque ligne contient 'width' caractères '#'.
         Si width ou height est nul, retourne une chaîne vide.
         """
-        
+        if (self.__width) == 0 or (self.__height) == 0:
+            return("")
 
