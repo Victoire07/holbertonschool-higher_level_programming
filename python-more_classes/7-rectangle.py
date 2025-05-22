@@ -27,8 +27,10 @@ class Rectangle:
     Classe Rectangle qui définit un rectangle avec :
     - des attributs privés pour la largeur et la hauteur
     - des accesseurs avec vérification de type et de valeur
-    - un compteur d'instances (number_of_instances) qui suit le nombre d'objets créés
-    - un attribut de classe print_symbol utilisé pour personnaliser l'affichage du rectangle
+    - un compteur d'instances (number_of_instances) qui suit le nombre
+    d'objets créés
+    - un attribut de classe print_symbol utilisé pour personnaliser
+    l'affichage du rectangle
     """
     number_of_instances = 0
     print_symbol = "#"
@@ -114,7 +116,8 @@ class Rectangle:
         if (self.__width) == 0 or (self.__height) == 0:
             return ("")
         else:
-            return ("\n".join([str(self.print_symbol) * self.__width] * self.__height))
+            return ("\n".join([str(self.print_symbol) * self.__width]
+                              * self.__height))
 
     def __repr__(self):
         """
