@@ -14,7 +14,7 @@ Ce module définit une classe Rectangle avec :
   avec des '#'
 - la méthode __repr__ qui retourne une chaîne permettant de recréer
   un objet identique avec eval()
-- la méthode __del__ qui affiche "Bye rectangle..." 
+- la méthode __del__ qui affiche "Bye rectangle..."
 lors de la suppression de l’instance
 """
 
