@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module 2-rectangle.py
+Module 3-rectangle.py
 
 Ce module définit une classe Rectangle avec :
 - deux attributs privés : __width et __height
@@ -10,6 +10,7 @@ Ce module définit une classe Rectangle avec :
 - une méthode area() qui retourne l’aire
 - une méthode perimeter() qui
 retourne le périmètre (0 si width ou height est nul)
+- __str__ qui retourne une repréxenttaion textuelle du rectangle avec des #
 """
 
 
