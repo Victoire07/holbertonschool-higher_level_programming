@@ -88,7 +88,7 @@ class Rectangle:
             return (0)
         else:
             return (2 * (self.__height + self.__width))
-        
+
     def __str__(self):
         """
         Retourne une représentation textuelle du rectangle avec des '#'
@@ -97,5 +97,6 @@ class Rectangle:
         Si width ou height est nul, retourne une chaîne vide.
         """
         if (self.__width) == 0 or (self.__height) == 0:
-            return("")
-
+            return ("")
+        else:
+            return ("\n".join(["#" * self.__width] * self.__height))
