@@ -21,6 +21,9 @@ Rectangle vivants
 - un attribut print_symbol utilisé pour représenter graphiquement le rectangle
 - une méthode statique bigger_or_equal() pour comparer deux rectangles
 selon leur aire
+- une méthode de classe square() qui retourne un rectangle de largeur et
+  hauteur égales (carré)
+- une méthode de classe square() qui retourne un rectangle avec width == height
 """
 
 
@@ -158,3 +161,14 @@ class Rectangle:
             return (rect_1)
         else:
             return (rect_2)
+
+    @classmethod
+    def square(cls, size=0):
+        """
+        Crée un nouveau rectangle ayant la même largeur et hauteur.
+        Cette méthode permet de créer un carré à partir d'une seule valeur.
+        Args: size (int): la taille du côté du carré (valeur par défaut : 0)
+        Returns: Rectangle: une nouvelle instance de Rectangle avec largeur
+        et hauteur égales à size
+        """
+        return (cls(size, size))
