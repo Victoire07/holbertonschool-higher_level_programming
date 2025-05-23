@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module 8-rectangle.py
+AJUSTER Module 8-rectangle.py
 
 Ce module définit une classe Rectangle avec :
 - deux attributs privés : __width et __height
