@@ -144,9 +144,11 @@ class Rectangle:
         Si les deux ont la même aire, retourne rect_1.
         Args: rect_1 (Rectangle): premier rectangle à comparer
         rect_2 (Rectangle): second rectangle à comparer
-        Raises:TypeError: si rect_1 ou rect_2 ne sont pas des instances de Rectangle
+        Raises:TypeError: si rect_1 ou rect_2 ne sont pas des
+        instances de Rectangle
         Returns:
-        Rectangle: le rectangle ayant la plus grande aire ou rect_1 en cas d’égalité
+        Rectangle: le rectangle ayant la plus grande aire ou rect_1
+        en cas d’égalité
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
