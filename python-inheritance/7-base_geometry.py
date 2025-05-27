@@ -15,6 +15,7 @@ class BaseGeometry:
         que le calcul de l'aire n'est pas encore implémenté.
         """
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """
         Valide que value est un entier strictement positif.
