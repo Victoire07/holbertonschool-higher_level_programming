@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module représentant une classe Rectangle dérivée de BaseGeometry
-Cette classe permet de créer des rectangles avec des attributs de largeur et 
+Cette classe permet de créer des rectangles avec des attributs de largeur et
 hauteur, tout en s'assurant que ces dimensions sont des entiers positifs
 """
 
@@ -29,6 +29,7 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     def __init__(self, width, height):
