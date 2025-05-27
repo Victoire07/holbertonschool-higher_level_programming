@@ -1,11 +1,18 @@
 #!/usr/bin/python3
-def print_sorted(self):
+"""
+Ce module définit la classe MyList qui hérite de list
+et ajoute une méthode pour afficher la liste triée.
+"""
+class MyList(list):
     """
-    Créer une classe personnalisée appelée MyList qui hérite de la classe Python list,
-    c’est-à-dire une classe qui se comporte comme une liste normale
-    mais avec une fonction en plus : print_sorted().
+    MyList est une sous-classe de list qui ajoute des fonctionnalités
+    supplémentaires
+    Elle se comporte comme une liste normale avec une méthode
+    pour imprimer les éléments dans l'ordre croissant
     """
-    class MyList(list):
+    def print_sorted(self):
         """
+        Imprime les éléments de la liste dans l'ordre croissant.
+        Cette méthode ne retourne rien et modifie l'affichage seulement.
         """
         print(sorted(self))
