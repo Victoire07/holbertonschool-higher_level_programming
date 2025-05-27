@@ -37,5 +37,7 @@ class Rectangle(BaseGeometry):
         Initialise un rectangle avec une largeur et une hauteur
         validées comme entiers strictement positifs.
         """
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
