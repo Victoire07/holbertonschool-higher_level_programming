@@ -11,3 +11,17 @@ ValueError: age must be greater than 0
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
+>>> bg.integer_validator("toto", 1)
+>>> bg.integer_validator("tata", 999)
+>>> bg.integer_validator("zero", 0)
+Traceback (most recent call last):
+ValueError: zero must be greater than 0
+>>> bg.integer_validator("negatif", -1)
+Traceback (most recent call last):
+ValueError: negatif must be greater than 0
+>>> bg.integer_validator("float", 3.5)
+Traceback (most recent call last):
+TypeError: float must be an integer
+>>> bg.integer_validator("string", "3")
+Traceback (most recent call last):
+TypeError: string must be an integer
