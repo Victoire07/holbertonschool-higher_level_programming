@@ -6,23 +6,30 @@ Ce module définit la classe BaseGeometry avec des méthodes de validation
 
 class BaseGeometry:
     """
-    Classe de base pour la geometie
+    Classe de base pour la géométrie.
+    Fournit des méthodes de validation de type et d'aire.
     """
+
     def area(self):
         """
-        Méthode qui lève une exception pour indiquer
-        que le calcul de l'aire n'est pas encore implémenté.
+        Méthode virtuelle qui lève une exception.
+        Doit être surchargée par les classes filles.
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        Valide que value est un entier strictement positif.
-        Args: ° name: nom du champ (utilisé dans le message d'erreur)/
-        ° value: valeur à valider
-        Raises: °TypeError: si value n'est pas un int
-        °ValueError: si value <= 0
+        Valide que 'value' est un entier strictement positif.
+
+        Args:
+        ° name (str): Le nom du champ à valider.
+        ° value (int): La valeur à valider.
+
+        Raises:
+        ° TypeError: Si 'value' n'est pas un entier.
+        ° ValueError: Si 'value' est inférieur ou égal à 0.
         """
+
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
