@@ -1,13 +1,39 @@
 >>> MyList = __import__('1-my_list').MyList
+
+# Création d'une instance avec des éléments non triés
 >>> my_list = MyList()
->>> my_list.append(4)
->>> my_list.append(1)
+>>> my_list.append(10)
 >>> my_list.append(3)
->>> my_list.append(2)
+>>> my_list.append(7)
+>>> my_list.append(1)
 >>> my_list.append(5)
+
+# Affichage normal de la liste
 >>> print(my_list)
-[4, 1, 3, 2, 5]
+[10, 3, 7, 1, 5]
+
+# Appel à print_sorted (doit afficher la liste triée)
 >>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+[1, 3, 5, 7, 10]
+
+# Vérification que la liste n’a pas été modifiée
 >>> print(my_list)
-[4, 1, 3, 2, 5]
+[10, 3, 7, 1, 5]
+
+# Cas limite : liste vide
+>>> empty = MyList()
+>>> print(empty)
+[]
+>>> empty.print_sorted()
+[]
+
+# Cas avec doublons
+>>> dup = MyList()
+>>> dup.append(2)
+>>> dup.append(4)
+>>> dup.append(2)
+>>> dup.append(1)
+>>> dup.print_sorted()
+[1, 2, 2, 4]
+>>> print(dup)
+[2, 4, 2, 1]
