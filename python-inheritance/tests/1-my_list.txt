@@ -1,39 +1,44 @@
 >>> MyList = __import__('1-my_list').MyList
 
-# Création d'une instance avec des éléments non triés
+# Création d'une instance et ajout d'éléments
 >>> my_list = MyList()
->>> my_list.append(10)
->>> my_list.append(3)
->>> my_list.append(7)
->>> my_list.append(1)
 >>> my_list.append(5)
+>>> my_list.append(1)
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(4)
 
-# Affichage normal de la liste
+# Affichage de la liste normale
 >>> print(my_list)
-[10, 3, 7, 1, 5]
+[5, 1, 3, 2, 4]
 
-# Appel à print_sorted (doit afficher la liste triée)
+# Affichage trié sans modifier l'ordre
 >>> my_list.print_sorted()
-[1, 3, 5, 7, 10]
+[1, 2, 3, 4, 5]
 
-# Vérification que la liste n’a pas été modifiée
+# Vérification que la liste n'a pas changé
 >>> print(my_list)
-[10, 3, 7, 1, 5]
+[5, 1, 3, 2, 4]
 
-# Cas limite : liste vide
->>> empty = MyList()
->>> print(empty)
-[]
->>> empty.print_sorted()
+# Test avec une liste vide
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
 []
 
-# Cas avec doublons
->>> dup = MyList()
->>> dup.append(2)
->>> dup.append(4)
->>> dup.append(2)
->>> dup.append(1)
->>> dup.print_sorted()
-[1, 2, 2, 4]
->>> print(dup)
-[2, 4, 2, 1]
+# Test avec des doublons
+>>> dup_list = MyList()
+>>> dup_list.append(2)
+>>> dup_list.append(1)
+>>> dup_list.append(2)
+>>> dup_list.append(3)
+>>> dup_list.print_sorted()
+[1, 2, 2, 3]
+
+# Test avec valeurs négatives
+>>> neg_list = MyList()
+>>> neg_list.append(-3)
+>>> neg_list.append(0)
+>>> neg_list.append(2)
+>>> neg_list.append(-1)
+>>> neg_list.print_sorted()
+[-3, -1, 0, 2]
