@@ -4,6 +4,8 @@ Module exercice task_01_duck_typing
 """
 from abc import ABC, abstractmethod
 import math
+
+
 class Shape(ABC):
     """
     Classe abstraite représentant une forme géométrique.
@@ -25,6 +27,7 @@ class Shape(ABC):
         """
         pass
 
+
 class Circle(Shape):
     """
     Classe représentant un cercle, héritant de la classe abstraite Shape.
@@ -37,21 +40,24 @@ class Circle(Shape):
         Initialise un cercle avec un rayon donné
         """
         self.radius = radius
+
     def area(self):
         """
         Retourne la surface du cercle
         """
         return (math.pi * self.radius * self.radius)
+
     def perimeter(self):
         """
         Retourne le périmètre du cercle
         """
         return (2 * math.pi * self.radius)
 
+
 class Rectangle(Shape):
     """
     Classe représentant un rectangle héritée dla classe abstraite Shape
-    Son constructeur doit accepter la largeur et la hauteur. 
+    Son constructeur doit accepter la largeur et la hauteur.
     Sont impléméntées les méthodes area et perimeter.
     """
     def __init__(self, width, height):
@@ -60,11 +66,13 @@ class Rectangle(Shape):
         """
         self.width = width
         self.height = height
+
     def area(self):
         """
         Retourne l'aire du rectangle
         """
         return (self.height * self.width)
+
     def perimeter(self):
         return (2 * (self.width + self.height))
 
