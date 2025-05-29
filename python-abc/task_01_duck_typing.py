@@ -54,9 +54,19 @@ class Rectangle(Shape):
     Son constructeur doit accepter la largeur et la hauteur. 
     Sont impléméntées les méthodes area et perimeter.
     """
-    def __init__():
+    def __init__(self, width, height):
         """
+        Initialise un rectangle avce une largeur et une hauteur données
         """
+        self.width = width
+        self.height = height
+    def area(self):
+        """
+        Retourne l'aire du rectangle
+        """
+        return (self.height * self.width)
+    def perimeter(self):
+        return (2 * (self.width + self.height))
     
 
 
