@@ -17,10 +17,26 @@ class Shape(ABC):
         """
         Permet de calculer la surface
         """
+    @abstractmethod
     def perimeter(self):
         """
         Permet de calculer le périmètre
         """
         pass
+
+class Circle(Shape):
+    """
+    Classe représentant un cercle, héritant de la classe abstraite Shape.
+
+    Cette classe permet de calculer l'aire et le périmètre d’un cercle
+    à partir de son rayon. Elle implémente les méthodes area() et perimeter().
+    """
+    def __init__(self, radius):
+        """
+        Initialise un cercle avec un rayon donné
+        """
+        self.radius = radius
+
+
 
 
