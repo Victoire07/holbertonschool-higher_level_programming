@@ -3,6 +3,7 @@
 Module exercice task_01_duck_typing
 """
 from abc import ABC, abstractmethod
+import math
 class Shape(ABC):
     """
     Classe abstraite représentant une forme géométrique.
@@ -36,6 +37,17 @@ class Circle(Shape):
         Initialise un cercle avec un rayon donné
         """
         self.radius = radius
+    def area(self):
+        """
+        Retourne la surface du cercle
+        """
+        return (math.pi * self.radius * self.radius)
+    def perimeter(self):
+        """
+        Retourne le périmètre du cercle
+        """
+        return (2 * math.pi * self.radius)
+    
 
 
 
