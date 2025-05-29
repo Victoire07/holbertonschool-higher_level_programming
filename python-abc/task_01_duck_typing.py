@@ -70,11 +70,11 @@ class Rectangle(Shape):
 
 
 def shape_info(obj):
-        """
-        Affiche l’aire et le périmètre d’un objet géométrique donné.
-        Utilise le duck typing
-        """
-        aire = obj.area()
-        perimetre = obj.perimeter()
-        print("Area:", aire)
-        print("Perimeter:", perimetre)
+    """
+    Affiche l’aire et le périmètre d’un objet géométrique donné.
+    Utilise le duck typing
+    """
+    aire = obj.area()
+    perimetre = obj.perimeter()
+    print("Area:", aire)
+    print("Perimeter:", perimetre)
