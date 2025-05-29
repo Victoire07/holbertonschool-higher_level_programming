@@ -30,3 +30,14 @@ class Dog(Animal):
         Permet l'aboiement du chien
         """
         return ("Bark")
+    
+class Cat(Animal):
+    """
+    Classe pour représenter le chat héritant de la classe abstraite Animal
+    Cette classe implémente sound pour retourner le miaulement du chat
+    """
+    def sound(self):
+        """
+        Permet le miaulement du chat
+        """
+        return ("Meow")
