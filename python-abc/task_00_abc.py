@@ -6,7 +6,10 @@ from abc import ABC, abstractmethod
 
 class Animal(ABC):
     """
-    Fais moi la docstring ici stp
+    Classe abstraite représentant un animal.
+
+    Cette classe impose aux sous-classes de définir la méthode `sound`,
+    qui permet de décrire le cri ou le son émis par l'animal.
     """
     @abstractmethod
     def sound(self):
@@ -14,3 +17,16 @@ class Animal(ABC):
         Permet de décrire le bruit de l'animal (son cri)
         """
         pass
+
+class Dog(Animal):
+    """
+    Classe représentant un chien, héritant de la classe abstraite Animal.
+
+    Cette classe implémente la méthode `sound` pour retourner
+    le son spécifique du chien
+    """
+    def sound(self):
+        """
+        Permet l'aboiement du chien
+        """
+        return ("Bark")
