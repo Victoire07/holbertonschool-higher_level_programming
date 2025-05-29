@@ -67,3 +67,14 @@ class Rectangle(Shape):
         return (self.height * self.width)
     def perimeter(self):
         return (2 * (self.width + self.height))
+
+
+def shape_info(obj):
+        """
+        Affiche l’aire et le périmètre d’un objet géométrique donné.
+        Utilise le duck typing
+        """
+        aire = obj.area()
+        perimetre = obj.perimeter()
+        print("Area:", aire)
+        print("Perimeter:", perimetre)
