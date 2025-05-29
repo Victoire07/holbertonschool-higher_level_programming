@@ -6,6 +6,8 @@ strictement positif à l’aide de la méthode integer_validator héritée.
 """
 
 Rectangle = __import__('9-rectangle').Rectangle
+
+
 class Square(Rectangle):
     """
     Représente un carré, avec largeur et hauteur identiques.
