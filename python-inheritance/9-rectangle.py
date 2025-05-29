@@ -23,7 +23,7 @@ class Rectangle(BaseGeometry):
         """
         Calcule et retourne l'aire du rectangle
         """
-        return self.__height * self.width
+        return self.__height * self.__width
 
     def __str__(self):
         """
