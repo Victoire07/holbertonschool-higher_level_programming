@@ -47,6 +47,16 @@ class Circle(Shape):
         Retourne le périmètre du cercle
         """
         return (2 * math.pi * self.radius)
+
+class Rectangle(Shape):
+    """
+    Classe représentant un rectangle héritée dla classe abstraite Shape
+    Son constructeur doit accepter la largeur et la hauteur. 
+    Sont impléméntées les méthodes area et perimeter.
+    """
+    def __init__():
+        """
+        """
     
 
 
