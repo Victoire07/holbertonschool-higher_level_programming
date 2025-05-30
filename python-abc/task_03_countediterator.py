@@ -4,12 +4,21 @@ Module exercice task_03_countediterator
 """
 class CountedIterator:
     """
-    Fais moi la docstring stpp
+    Itérateur personnalisé qui compte le nombre d’éléments déjà parcourus
     """
-    def __init__(self, iterator, count):
+
+    def __init__(self, iterable):
         """
-        Fais moi la docstring stp
+        Initialise l’itérateur interne et le compteur à 0
         """
-        self.iterator = iterator
-        self.count = count
-        
+        self.iterator = iter(iterable)
+        self.count = 0
+
+    def __next__(self):
+        """
+        Retourne l’élément suivant et incrémente le compteur
+        """
+        valeur = next(self.iterator)
+        self.count += 1
+        return (valeur)
+    
