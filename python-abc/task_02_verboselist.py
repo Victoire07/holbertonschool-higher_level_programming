@@ -10,5 +10,9 @@ class VerboseList(list):
     def append(self, item):
         super().append(item)
         print(f"Added [{item}] to the list.")
-    def
+
+    def extend(self, iterable):
+        super().extend(iterable)
+        print(f"Extended the list with [{len(iterable)}] items.")
+
 
