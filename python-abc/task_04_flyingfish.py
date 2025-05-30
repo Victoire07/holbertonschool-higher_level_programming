@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 class Fish:
     """
+    Classe pour représenter un poisson
     """
     def swim(self):
         print("The fish is swimming")
@@ -10,6 +11,7 @@ class Fish:
 
 class Bird:
     """
+    Classe pour représenter un oiseau
     """
     def fly(self):
         print("The bird is flying")
@@ -20,6 +22,8 @@ class Bird:
 
 class FlyingFish(Fish, Bird):
     """
+    Classe représentant un poisson volant,
+    combinant les caractéristiques du poisson et de l’oiseau
     """
     def fly(self):
         print("The flying fish is soaring!")
