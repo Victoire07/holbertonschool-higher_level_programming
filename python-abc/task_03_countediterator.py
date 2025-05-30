@@ -2,6 +2,8 @@
 """
 Module exercice task_03_countediterator
 """
+
+
 class CountedIterator:
     """
     Itérateur personnalisé qui compte le nombre d’éléments déjà parcourus
@@ -21,4 +23,9 @@ class CountedIterator:
         valeur = next(self.iterator)
         self.count += 1
         return (valeur)
-    
+
+    def get_count(self):
+        """
+        Retourne le nombre d'éléments déjà parcourus
+        """
+        return (self.count)
