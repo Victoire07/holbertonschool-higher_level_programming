@@ -74,6 +74,9 @@ class Rectangle(Shape):
         return (self.height * self.width)
 
     def perimeter(self):
+        """
+        Retourne le périmètre du rectangle
+        """
         return (2 * (self.width + self.height))
 
 

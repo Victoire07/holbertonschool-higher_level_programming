@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module exercice task_04_flyingfish
+"""
+
+
 class Fish:
     """
     Classe pour représenter un poisson
@@ -8,6 +13,7 @@ class Fish:
 
     def habitat(self):
         print("The fish lives in water")
+
 
 class Bird:
     """
