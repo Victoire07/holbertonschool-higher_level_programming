@@ -4,6 +4,7 @@ Module 4-from_json_string.py
 """
 import json
 
+
 def from_json_string(my_str):
     """
     Fonction qui reçoit une chaîne de caractères au format JSON
