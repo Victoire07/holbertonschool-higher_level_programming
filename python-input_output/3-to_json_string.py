@@ -11,4 +11,3 @@ def to_json_string(my_obj):
     et retourne une chaîne de caractères représentant cet objet au format JSON
     """
     return json.dumps(my_obj)
-
