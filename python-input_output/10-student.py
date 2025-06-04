@@ -16,8 +16,19 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """
-        Retourne un dictionnaire représentant les attributs de l'étudiant
+        Retourne un dictionnaire représentant l'étudiant.
+        Si attrs est une liste de chaînes, retourne uniquement
+        les attributs listés
+        Sinon, retourne tous les attributs.
         """
-        return self.__dict__
+        if isinstance(attrs, list):
+
+            attr_dic = {}
+            for element in attrs:
+                if isinstance(element, str) and hasattr(self, element):
+                    attr_dic[element] = getattr(self, element)
+            return attr_dic
+        else:
+            return self.__dict__
