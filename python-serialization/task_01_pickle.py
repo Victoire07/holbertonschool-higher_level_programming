@@ -14,7 +14,7 @@ class CustomObject:
     def __init__(self, name, age, is_student):
         """
         Initialise un nouvel objet CustomObject.
-        ARGUMENTS : 
+        Args : 
         ° name (str): Le nom de la personne.
         ° age (int): L'âge de la personne.
         ° is_student (bool): Le statut étudiant (True ou False).
@@ -26,12 +26,19 @@ class CustomObject:
         
     def display(self):
         """
+        Affiche les attributs de l'objet
         """
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Is Student: {self.is_student}")
 
     def serialize(self, filename):
+        """
+        Sérialise l'objet et l'enregistre dans un fichier.
+
+        Args:
+        ° filename (str): Le nom du fichier de sortie
+        """
         try:
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
@@ -41,6 +48,13 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         """
+         Désérialise un objet CustomObject depuis un fichier.
+
+        Args:
+        ° filename (str): Le nom du fichier d'entrée.
+
+        Returns:
+        ° CustomObject: L'objet désérialisé ou None si erreur
         """
         try:
             with open(filename, "rb") as f:
