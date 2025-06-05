@@ -47,7 +47,3 @@ class CustomObject:
                 return (pickle.load(f))
         except Exception:
             return (None)
-
-    
-        
-
