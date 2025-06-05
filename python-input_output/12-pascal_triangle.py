@@ -7,3 +7,5 @@ def pascal_triangle(n):
     Fonction qui retourne le triangle de Pascal,
     sous forme de liste de listes de nombres entiers
     """
+    if n <= 0:
+        return []
