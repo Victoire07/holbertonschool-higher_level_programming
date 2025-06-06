@@ -18,7 +18,7 @@ def convert_csv_to_json(csv_filename):
     """
     try:
         with open(csv_filename, "r") as csv_file:
-            variable_reader = csv.DictReader(f)
+            variable_reader = csv.DictReader(csv_file)
             variable_data = [row for row in variable_reader]  # Créer une liste de dictionnaires
 
         with open("data.json", "w") as json_file:
