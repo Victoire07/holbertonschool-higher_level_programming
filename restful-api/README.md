@@ -1,6 +1,6 @@
 # README projet restful-api :
 
-📚 0. Basics of HTTP/HTTPS :
+📚 **0. BASICS OF HTTP/HTTPS**
 
 🔀 DIFFERENCE ENTRE HTTP ET HTTPS : 
 
