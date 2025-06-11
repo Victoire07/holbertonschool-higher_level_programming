@@ -4,6 +4,7 @@ Module task_02_requests
 """
 
 import requests
+import csv
 
 def fetch_and_print_posts():
     """
