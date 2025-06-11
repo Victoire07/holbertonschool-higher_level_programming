@@ -17,3 +17,8 @@ def fetch_and_print_posts():
             print(variable_un_post["title"])
     else:
         print("Erreur", variable_reponse.status_code)
+
+def fetch_and_save_posts():
+    """
+    Fonction qui va  qui récuperer tous les messages dans le JSONPlaceholder
+    """
