@@ -23,3 +23,8 @@ def fetch_and_save_posts():
     """
     Fonction qui va  qui récuperer tous les messages dans le JSONPlaceholder
     """
+    variable_reponse = requests.get("https://jsonplaceholder.typicode.com/posts")
+    if variable_reponse.status_code == 200:
+        print("Status Code: 200")
+    else:
+        print("Erreur", variable_reponse.status_code)
