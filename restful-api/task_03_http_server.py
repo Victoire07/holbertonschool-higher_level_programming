@@ -55,7 +55,7 @@ class API_Server(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"Endpoint not found".encode("utf-8"))
+            self.wfile.write(b"Endpoint not found")
 
 
 if __name__ == "__main__":
