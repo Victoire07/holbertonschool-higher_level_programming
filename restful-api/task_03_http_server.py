@@ -5,6 +5,7 @@ task_O3-http_server.py
 import json
 import http.server
 
+
 class API_Server(http.server.BaseHTTPRequestHandler):
     """
     """
@@ -35,6 +36,3 @@ class API_Server(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write("Endpoint not found".encode("utf-8"))
-    
-
-
