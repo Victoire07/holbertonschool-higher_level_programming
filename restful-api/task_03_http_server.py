@@ -2,6 +2,7 @@
 """
 task_O3-http_server.py
 """
+from http.server import HTTPServer
 import json
 import http.server
 
@@ -50,3 +51,10 @@ class API_Server(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Endpoint not found".encode("utf-8"))
+
+if __name__ == "__main__":
+    # Lancer le serveur sur le port 8000
+    server_address = ("", 8000)
+    httpd = HTTPServer(server_address, API_Server)
+    print("Serveur lancé sur http://localhost:8000")
+    httpd.serve_forever()
