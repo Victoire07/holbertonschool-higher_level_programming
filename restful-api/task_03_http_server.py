@@ -30,7 +30,7 @@ class API_Server(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("Hello, this is a simple API!".encode("utf-8"))
+            self.wfile.write(b"Hello, this is a simple API!".encode("utf-8"))
 
         elif self.path == "/data":
             data = {"name": "John", "age": 30, "city": "New York"}
@@ -43,10 +43,10 @@ class API_Server(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("OK".encode("utf-8"))
+            self.wfile.write(b"OK".encode("utf-8"))
 
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("Endpoint not found".encode("utf-8"))
+            self.wfile.write(b"Endpoint not found".encode("utf-8"))
