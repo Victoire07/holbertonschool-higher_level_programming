@@ -16,6 +16,7 @@ class API_Server(http.server.BaseHTTPRequestHandler):
     - / : renvoie un message texte "Hello, this is a simple API!"
     - /data : renvoie un dictionnaire encodé en JSON avec des données fictives
     - /status : renvoie "OK" pour indiquer que le serveur est opérationnel
+    - /info : renvoie le code HTML
     - Tout autre chemin : renvoie une erreur 404 "Endpoint not found"
     """
     def do_GET(self):
