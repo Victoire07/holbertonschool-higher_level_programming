@@ -3,7 +3,6 @@
 Code pour fichier main généré par IA :)
 """
 
-
 from http.server import HTTPServer
 from task_03_http_server import API_Server
 
