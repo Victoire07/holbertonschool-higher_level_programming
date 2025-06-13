@@ -17,7 +17,7 @@ def home():
 def get_usernames():
     return (jsonify(list(users.keys())))
 
-@app.route("status")
+@app.route("/status")
 def status():
     return ("OK")
 
