@@ -2,7 +2,7 @@
 """
 task_04_flask.py
 """
-import jsonify
+
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
