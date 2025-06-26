@@ -1,0 +1,1 @@
+-- Crée la table cities dans hbtn_0d_usa avec une clé étrangère vers la table states
