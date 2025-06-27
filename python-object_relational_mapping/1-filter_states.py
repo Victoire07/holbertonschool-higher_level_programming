@@ -7,6 +7,7 @@ import MySQLdb
 
 if __name__ == "__main__":
     """
+    Print tous les états commençant par N et triés par id
     """
     db = MySQLdb.connect(
         host="localhost",
@@ -15,3 +16,5 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3]
     )
+    cur = db.cursor()
+    cur.execute("SELECT * FROM ")
