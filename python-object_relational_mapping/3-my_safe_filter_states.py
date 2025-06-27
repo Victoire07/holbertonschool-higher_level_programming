@@ -25,7 +25,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states "
-        "WHERE BINARY name = %s "
+        "WHERE name = %s "
         "ORDER BY id ASC",
         (sys.argv[4],)
     )
