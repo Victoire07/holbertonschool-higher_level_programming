@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Script sécurisé contre les injections SQL
 Affiche les états dont le nom correspond à celui donné par l'utilisateur
