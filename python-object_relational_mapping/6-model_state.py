@@ -9,8 +9,8 @@ from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     """
-    Se connecte à la BD et dresse la liste de tous les objets de l'État,
-    triés par numéro d'identification dans l'ordre croissant
+    Connects to the database and lists all State objects,
+    sorted by id in ascending order.
     """
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(
