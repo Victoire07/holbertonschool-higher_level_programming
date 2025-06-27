@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Liste tous les objets State de la base hbtn_0e_6_usa, triés par id.
 Affiche : <id>: <name>
@@ -6,18 +6,18 @@ Affiche : <id>: <name>
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State 
+from model_state import Base, State
 
 if __name__ == "__main__":
     """
-    Se connecte à la base de données et liste tous les objets State triés par id
+    Se connecte à la BD et liste tous les objets State triés par id
     """
     engine = create_engine(
-    'mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1], sys.argv[2], sys.argv[3]
-    ),
-    pool_pre_ping=True
-)
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(
+            sys.argv[1], sys.argv[2], sys.argv[3]
+        ),
+        pool_pre_ping=True
+    )
     Session = sessionmaker(bind=engine)
     session = Session()
 
