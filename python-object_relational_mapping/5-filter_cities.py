@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Afficher les villes d'un état donné (passé en argument) depuis la base de données
+Afficher les villes d'un état donné (passé en argument)depuis la base de données
 hbtn_0e_4_usa, avec protection contre les injections SQL.
-Les résultats doivent être affichés sur une seule ligne, séparés par des virgules
+Les résultats doivent être affichés sur une seule ligne séparés par des virgules
 """
 
 import MySQLdb
