@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Afficher les villes d'un état donné (passé en argument)depuis la base de données
+Afficher les villes d'un état donné(passé en argument)depuis la base de données
 hbtn_0e_4_usa, avec protection contre les injections SQL.
-Les résultats doivent être affichés sur une seule ligne séparés par des virgules
+Les résultats doivent être affichés sur une seule ligne séparés par des ','
 """
 
 import MySQLdb
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     )
     villes_list = cur.fetchall()
     ville_list = [row[0] for row in villes_list]
-    print(",".join (ville_list[0] for ville_list in villes_list))
+    print (",".join (ville_list[0] for ville_list in villes_list))
 
     cur.close()
     db.close()
