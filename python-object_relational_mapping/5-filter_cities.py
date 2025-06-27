@@ -28,9 +28,9 @@ if __name__ == "__main__":
         "ORDER BY cities.id ASC",
         (sys.argv[4],)
     )
-    rows = cur.fetchall()
-    ville_list = [row[0] for row in rows]
-    print(",".join (ville_list))
+    villes_list = cur.fetchall()
+    ville_list = [row[0] for row in villes_list]
+    print(",".join (ville_list[0] for ville_list in villes_list))
 
     cur.close()
     db.close()
