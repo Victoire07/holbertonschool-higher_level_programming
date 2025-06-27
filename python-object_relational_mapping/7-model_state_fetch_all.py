@@ -3,9 +3,9 @@
 Liste tous les objets State de la base hbtn_0e_6_usa, triés par id.
 Affiche : <id>: <name>
 """
-import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import sys
 from model_state import Base, State
 
 if __name__ == "__main__":
