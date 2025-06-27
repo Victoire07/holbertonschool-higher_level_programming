@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Afficher toutes les villes (cities) avec le nom de leur état (states) associé, depuis
-la BD hbtn_0e_4_usa
+Afficher toutes les villes (cities) avec le nom de leur état (states) associé
+depuis la BD hbtn_0e_4_usa
 """
 import sys
 import MySQLdb
