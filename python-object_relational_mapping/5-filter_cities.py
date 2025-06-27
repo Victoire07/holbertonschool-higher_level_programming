@@ -30,7 +30,7 @@ if __name__ == "__main__":
     )
     villes_list = cur.fetchall()
     ville_list = [row[0] for row in villes_list]
-    print (",".join (ville_list[0] for ville_list in villes_list))
+    print(",".join(ville_list))
 
     cur.close()
     db.close()
