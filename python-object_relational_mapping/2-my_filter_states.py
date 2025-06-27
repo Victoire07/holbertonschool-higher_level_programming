@@ -26,6 +26,7 @@ if __name__ == "__main__":
         "ORDER BY id ASC"
         ).format(sys.argv[4])
 
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
         print(row)
