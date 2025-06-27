@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+
 """
 Afficher tous les enregistrements de la table states, triés par id croissant,
 à partir de la base de données passée en argument.
@@ -8,7 +9,8 @@ import MySQLdb
 
 if __name__ == "__main__":
     """
-    Prints all states sorted by id
+    Afficher tous les enregistrements de la table states triés par id croissant
+    à partir de la base de données passée en argument.
     """
     db = MySQLdb.connect(
         host="localhost",
