@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Afficher tous les états dont le nom commence par un "N" majuscule, triés par id
 """
