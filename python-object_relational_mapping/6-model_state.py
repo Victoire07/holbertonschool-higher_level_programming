@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 if __name__ == "__main__":
     """
     Se connecte à la base de données et répertorie tous les objets de l'État
-    triés par identifiant par ordre croissant 
+    triés par identifiant par ordre croissant
     """
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(
