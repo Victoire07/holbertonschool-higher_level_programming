@@ -1,9 +1,7 @@
 #!/usr/bin/node
 // #!/usr/bin/env node : pour execution
-const premier_argument = process.argv[2];
-const deuxieme_argument = process.argv[3];
-const a = parseInt(premier_argument);
-const b = parseInt(deuxieme_argument);
+const a = parseInt(process.argv[2]);
+const b = parseInt(process.argv[3]);
 function add(premier_nombre, deuxieme_nombre) {
     return premier_nombre + deuxieme_nombre;
 }
