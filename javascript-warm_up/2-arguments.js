@@ -3,9 +3,10 @@
 const args = process.argv;
 const userArgsCount = args.length - 2;
 
-if (args = 0)
-    const.log('No argument');
-else if (args = 1)
-    const.log('Argument found')
+if (userArgsCount == 0)
+    {console.log('No argument');}
+
+else if (userArgsCount == 1)
+        {console.log('Argument found');}
 else
-    const.log('Arguments found')
+        {console.log('Arguments found');}
