@@ -1,4 +1,6 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 // #!/usr/bin/env node : pour execution
 const lines = [ "C is fun", "Python is cool", "JavaScript is amazing" ];
-console.log(line);
+for(let index = 0; index < lines.length; index ++); {
+  console.log(lines[index]);
+}
