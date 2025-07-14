@@ -7,4 +7,4 @@ const b = parseInt(deuxieme_argument);
 function add(premier_nombre, deuxieme_nombre) {
     return premier_nombre + deuxieme_nombre;
 }
-console.log(add(premier_nombre, deuxieme_nombre))
+console.log(add(a, b))
