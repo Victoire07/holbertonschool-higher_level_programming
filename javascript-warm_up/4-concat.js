@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 // #!/usr/bin/env node : pour execution
 process.argv[2];
 process.argv[3];
