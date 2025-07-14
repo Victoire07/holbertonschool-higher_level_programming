@@ -8,5 +8,5 @@ if (isNaN(number)) {
   const line = 'X'.repeat(number);
   for (let index = 0; index < number; index++) {
     console.log(line);
-    }
+  }
 }
