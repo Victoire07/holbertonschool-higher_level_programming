@@ -5,6 +5,6 @@ if (args.length === 0) {
 } else if (args.length === 1) {
   console.log('0');
 } else {
-args.sort((a, b) => b - a);
+  args.sort((a, b) => b - a);
   console.log(args[1]);
 }
