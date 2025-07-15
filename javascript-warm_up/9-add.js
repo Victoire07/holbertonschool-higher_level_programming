@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// #!/usr/bin/env node : pour execution
 const a = parseInt(process.argv[2]);
 const b = parseInt(process.argv[3]);
 function add(a, b) {
