@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import json
 import csv
 
@@ -28,6 +28,26 @@ def products():
                     products_list.append(row)
         except Exception as erreur:
             error_message = f"Erreur de lecture du CSV : {erreur}"
+
+    if product_id:
+        try:
+            # Convertit le paramètre id dc la string en int
+            product_id = int(product_id)
+
+            # Cherche le produit avec cet id dans la liste
+            matching_product = None
+            for product in products_list:
+                if int(product['id']) == product_id:
+                    matching_product = product
+                    break
+
+            if matching_product:
+                products_list = [matching_product]  # Garde que CE produit
+            else:
+                error_message = "Product not found"
+
+        except ValueError:
+            error_message = "Invalid id format"
 
     return render_template('product_display.html',
                            products=products_list,
