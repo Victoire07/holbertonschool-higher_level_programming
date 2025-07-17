@@ -12,6 +12,13 @@ def products():
     products_list = []         # contiendra tous les produits vide pour l'instant!!
     error_message = None       # Si erreur source inconnue ou id introuvable
 
+    if source == "json":
+        try:
+            with open("products.json") as fichier:
+                data = json.load(fichier)
+                products_list = data
+        except Exception as erreur:
+            error_message = f"Erreur lecture JSON : {erreur}"
 
     return render_template('product_display.html',
                            products=products_list,
