@@ -27,4 +27,12 @@ def generate_invitations(template, attendees):
                 value = "N/A"
             invitation_text = invitation_text.replace("{" + key + "}", value)
 
-        
+        # Nom du fichier de sortie
+        filename = f"output_{index}.txt"
+
+        # Écriture dans le fichier
+        try:
+            with open(filename, 'w') as fileopen:
+                fileopen.write(invitation_text)
+        except Exception as error:
+            print(f"Error writing file {filename}: {error}")
