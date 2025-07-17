@@ -16,3 +16,15 @@ def generate_invitations(template, attendees):
         return
     
     replace_fields = ["name", "event_title", "event_date", "event_location"]
+    # Boucle sur chaque invité avec son index
+    for index, person in enumerate(attendees, start=1):
+        invitation_text = template
+
+        # Remplacement de chaque champ
+        for key in replace_fields:
+            value = person.get(key)  # récupère la valeur dans le dictionnaire !
+            if not value:  # si None ou vide ou absent
+                value = "N/A"
+            invitation_text = invitation_text.replace("{" + key + "}", value)
+
+        
