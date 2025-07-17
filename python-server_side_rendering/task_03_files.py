@@ -20,6 +20,15 @@ def products():
         except Exception as erreur:
             error_message = f"Erreur lecture JSON : {erreur}"
 
+    elif source == "csv":
+        try:
+            with open ("products.csv") as fichier:
+                reader = csv.DictReader(fichier)
+                for row in reader:
+                    products_list.append(row)
+        except Exception as erreur:
+            error_message = f"Erreur de lecture du CSV : {erreur}"
+
     return render_template('product_display.html',
                            products=products_list,
                            error=error_message)
