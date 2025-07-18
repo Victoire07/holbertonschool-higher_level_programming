@@ -4,30 +4,66 @@ import csv
 
 app = Flask(__name__)
 
+def read_json_file(filepath):
+    with open(filepath, "r") as file:
+        return json.load(file)
+
+def read_csv_file(filepath):
+    products = []
+    with open(filepath, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            row["id"] = int(row["id"])
+            row["price"] = float(row["price"])
+            products.append(row)
+    return products
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact_page():
+    return render_template('contact.html')
+
+@app.route('/items')
+def items():
+    try:
+        with open('items.json') as f:
+            data = json.load(f)  # transforme le JSON en dictionnaire Python
+
+        # Récupère la liste des items
+        items_list = data.get('items', [])  # si 'items' n'existe pas dcp retourne liste vide !
+
+    except Exception as erreur:
+        print(f"Erreur lors de la lecture du fichier JSON : {erreur}")
+        items_list = []
+
+    # Passation de la liste au template
+    return render_template('items.html', items=items_list)
+
+
 @app.route("/products")
 def products():
     source = request.args.get("source")
     product_id = request.args.get("id")
 
+    if source not in ["json", "csv"]:
+        return render_template("product_display.html", error="Wrong source")
+
     products_list = []         # contiendra tous les produits vide pour l'instant!!
-    error_message = None       # Si erreur source inconnue ou id introuvable
 
-    if source == "json":
-        try:
-            with open("products.json") as fichier:
-                data = json.load(fichier)
-                products_list = data
-        except Exception as erreur:
-            error_message = f"Erreur lecture JSON : {erreur}"
-
-    elif source == "csv":
-        try:
-            with open ("products.csv") as fichier:
-                reader = csv.DictReader(fichier)
-                for row in reader:
-                    products_list.append(row)
-        except Exception as erreur:
-            error_message = f"Erreur de lecture du CSV : {erreur}"
+    try:
+        if source == "json":
+            products_list = read_json_file("products.json")
+        elif source == "csv":
+            products_list = read_csv_file("products.csv")
+    except Exception:
+        return render_template("product_display.html", error="Error reading file")
 
     if product_id:
         try:
@@ -35,24 +71,15 @@ def products():
             product_id = int(product_id)
 
             # Cherche le produit avec cet id dans la liste
-            matching_product = None
-            for product in products_list:
-                if int(product['id']) == product_id:
-                    matching_product = product
-                    break
-
-            if matching_product:
-                products_list = [matching_product]  # Garde que CE produit
-            else:
-                error_message = "Product not found"
-
+            matching_products = [p for p in products_list if int(p["id"]) == product_id]
+            if not matching_products:
+                return render_template("product_display.html", error="Product not found")
+            products_list = matching_products  # On garde uniquement le produit filtré
         except ValueError:
-            error_message = "Invalid id format"
+            return render_template("product_display.html", error="Invalid id format")
 
     return render_template('product_display.html',
-                           products=products_list,
-                           error=error_message)
-
+                           products=products_list)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+	app.run(debug=True, port=5000)
