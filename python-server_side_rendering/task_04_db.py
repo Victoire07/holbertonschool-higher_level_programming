@@ -85,6 +85,10 @@ def products():
             products_list = read_json_file("products.json")
         elif source == "csv":
             products_list = read_csv_file("products.csv")
+        elif source == "sql":
+            products_list = read_sqlite_file("products.db")
+        if products_list is None:
+            return render_template("product_display.html", error="Database error")
     except Exception:
         return render_template("product_display.html", error="Error reading file")
 
